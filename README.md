@@ -6,9 +6,9 @@ Simple Intel 1GbE network driver implementation using VFIO.
 
 ```sh
 % lspci -nn | grep -i Ether
-86:00.0 Ethernet controller [0200]: Intel Corporation 82574L Gigabit Network Connection [8086:10d3]
+01:00.0 Ethernet controller [0200]: Intel Corporation 82574L Gigabit Network Connection [8086:10d3]
 % sudo modprobe vfio-pci
-% echo 0000:86:00.0 | sudo tee -a /sys/bus/pci/devices/0000:86:00.0/driver/unbind
+% echo 0000:01:00.0 | sudo tee -a /sys/bus/pci/devices/0000:01:00.0/driver/unbind
 % echo 8086 10d3 | sudo tee -a /sys/bus/pci/drivers/vfio-pci/new_id
 % sudo chown -R group:user /dev/vfio/66
 ```
