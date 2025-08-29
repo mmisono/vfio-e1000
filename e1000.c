@@ -74,7 +74,7 @@ struct device {
 
 static char* region_name[VFIO_PCI_NUM_REGIONS] = {
     "BAR0", "BAR1", "BAR2", "BAR3", "BAR4", "BAR5", "ROM", "CONFIG", "VGA"};
-static char* irq_name[VFIO_PCI_NUM_IRQS] = {"INTX", "MSI", "MISX", "ERR",
+static char* irq_name[VFIO_PCI_NUM_IRQS] = {"INTX", "MSI", "MSIX", "ERR",
                                             "REQ"};
 
 // 82574L BARs (non-prefethcable, 32-bit addressing only)
